@@ -1,0 +1,21 @@
+<?php
+    $str = 'Hello';
+    check($str);
+    $int = 15;
+    check($int);
+    $double = 1.234;
+    check($double);
+    $arr = array(1,2,3);
+    check($arr);
+    $obj = (object)[1,2,'Hello'];
+    check($obj);
+    
+    function check($param){
+        if(is_numeric($param)){
+            echo var_dump($param)."<br>\n";
+        } else {
+            echo gettype($param) . "<br>\n";
+        }
+    }
+    
+?>
