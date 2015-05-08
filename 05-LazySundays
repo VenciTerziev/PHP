@@ -1,0 +1,8 @@
+<?php
+    $startdate=strtotime("last Sunday - 1 week");
+    $enddate=strtotime("+4 weeks",$startdate);
+
+    while ($startdate <  $enddate) {
+       echo date("j-S F,Y", $startdate),"<br>";
+       $startdate = strtotime("+1 week", $startdate);
+    }
