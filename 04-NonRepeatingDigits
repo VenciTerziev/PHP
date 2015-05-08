@@ -1,0 +1,28 @@
+<?php
+    $N = 1234;
+    printing($N);
+    $N = 12;
+    printing($N);
+    $N = 145;
+    printing($N);
+    
+    
+    function printing($val){
+        if($val <= 101){
+            echo "no";
+        } else {
+            for ($a = 1; $a < 10; $a++) {
+                for ($b = 0; $b < 10; $b++) {
+                    for ($c = 0; $c < 10; $c++) {
+                        if($a != $b && $b != $c && $a != $c){
+                            $var =  $a.$b.$c ;
+                            if($var <= $val){
+                                echo $var. ", ";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        echo "<br>\n";
+    }
